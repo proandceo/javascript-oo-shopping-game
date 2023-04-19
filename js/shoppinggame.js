@@ -368,6 +368,7 @@ const shop = (prodList, tBill, lastProd) => {
         );
         if (player.score >= 500) {
           // Define and set new property status in the player object here
+          Object.defineProperty(player.status, "Shopping Master");
           exitWon();
         } else {
           let iCount = ++player.items;
