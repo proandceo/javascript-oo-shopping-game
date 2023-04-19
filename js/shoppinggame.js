@@ -410,7 +410,7 @@ const rateAndExit = () => {
         playerRating.rating = r;
 
         // Call Object.assign() method here to populate target
-        target = Object.assign({}, player, playerRating);
+        let target = Object.assign({}, player, playerRating);
         console.log(
           `${target.name} you rated this game as ${target.rate}`.green
         );
@@ -423,7 +423,7 @@ const rateAndExit = () => {
 
 // Complete this function
 const exitLost = () => {
-  let pointsToReach; // Assign calculated value to pointsToReach here
+  let pointsToReach = 500 - player.getCurrentScore(); // Assign calculated value to pointsToReach here
   console.log(
     `Your chances are over! You are short of ${pointsToReach} to become a Shopping Master. Good Luck for next time!`
       .yellow
@@ -433,7 +433,7 @@ const exitLost = () => {
 
 // Complete this function
 const exitWon = () => {
-  let finalStatus;
+  let finalStatus = player.status;
   console.log(`Congratulations!!! You became ${finalStatus}!`.blue);
   rateAndExit();
 };
