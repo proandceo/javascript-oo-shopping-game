@@ -407,6 +407,7 @@ const rateAndExit = () => {
         rateAndExit();
       } else {
         // Call rating setter method of playerRating to set user entered rate value here
+        r = playerRating.rating;
 
         // Call Object.assign() method here to populate target
 
