@@ -398,7 +398,7 @@ const shop = (prodList, tBill, lastProd) => {
 // Complete this function
 const rateAndExit = () => {
   // Create a new instance of Rating and assign it to a variable named playerRating here
-  playerRating = new Rating();
+  let playerRating = new Rating();
   rl.question(
     "How would you rate this game on a scale of 1-10 (1 being the lowest)?:",
     function (r) {
